@@ -7,15 +7,14 @@ fn handle_client(mut stream: TcpStream) ->std::io::Result<()> {
     // let mut buff = vec![]
     // let mut vec = Vec::new();
 
-    const payload_size : usize = 2048
-    ;
-    let mut buf: [u8; payload_size] = [0; payload_size];
+    const PAYLOAD_SIZE : usize = 2048;
+    let mut buf: [u8; PAYLOAD_SIZE] = [0; PAYLOAD_SIZE];
     stream.read(&mut buf)?;
     
 
     let mut vec = Vec::new();
 
-    for x in (0..payload_size)  {
+    for x in (0..PAYLOAD_SIZE)  {
         vec.push(buf[x]);     
     }
     let out  =    str::from_utf8(&vec).unwrap();
