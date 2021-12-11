@@ -9,7 +9,10 @@
 // mod tcp_listener;
 // mod pointer_refs;
 // mod cli;
-mod enums;
+// mod enums;
+// mod module_with_mod_inside;
+// mod idomatic_rust_module;
+mod dir_module;
 
 extern crate exec_time;
 fn main() {
@@ -23,5 +26,9 @@ fn main() {
     // tcp_listener::run();
     // pointer_refs::run();
     // cli::run();
-    enums::run();
+    // enums::run();
+    // module_with_mod_inside::foo::bar();
+    // idomatic_rust_module::run();
+    dir_module::run();
+
 }
